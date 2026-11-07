@@ -47,6 +47,7 @@ A supplier uploads an invoice. The named buyer confirms the amount and the oblig
 - [Differentiators](#differentiators)
 - [Pan-African customers](#pan-african-customers)
 - [Review map](#review-map)
+- [Team](#team)
 - [Implementation status](#implementation-status)
 - [Risk management](#risk-management)
 - [Prospective roadmap](#prospective-roadmap)
@@ -119,6 +120,18 @@ The materials are arranged for three readings. The labels describe the documents
 | Product design | Phone-first invoice workflow, role-specific actions, confirmation by link, low-bandwidth and accessible screens | [Product design](WHITEPAPER.md#product-design) |
 | Technical design | Legal gate, invoice Multi-Purpose Token, sequential settlement Payment, hashes, signing, and reconcile rules | [Technical architecture](WHITEPAPER.md#technical-architecture) |
 | Business design | Origination fee, disclosed funder charge, corridor launch, and the sourced market context | [Business model](WHITEPAPER.md#business-model) and [Market position](WHITEPAPER.md#market-position) |
+
+## Team
+
+These are assigned responsibilities for the concept. They are not completed deliverables, and no interface has been shipped.
+
+**UI/UX Lead — [kayode96-max](https://github.com/kayode96-max)**
+
+- User journeys and information architecture for the supplier, buyer, funder, and operator
+- Wireframes and interactive prototypes
+- Visual design and a reusable design system
+- Responsive, accessible interface design
+- Usability testing and developer handoff
 
 ## Implementation status
 
