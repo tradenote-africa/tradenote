@@ -123,7 +123,7 @@ The materials are arranged for three readings. The labels describe the documents
 
 ## Team
 
-These are assigned responsibilities for the concept. They are not completed deliverables, and no interface has been shipped.
+These are assigned responsibilities for the concept. They are not completed deliverables. No interface or ledger integration has been built.
 
 **UI/UX Lead — [kayode96-max](https://github.com/kayode96-max)**
 
@@ -132,6 +132,14 @@ These are assigned responsibilities for the concept. They are not completed deli
 - Visual design and a reusable design system
 - Responsive, accessible interface design
 - Usability testing and developer handoff
+
+**Blockchain Lead — [Zakariyah Abdulaleem (@zakkycrypt01)](https://github.com/zakkycrypt01)**
+
+- XRP Ledger architecture
+- On-ledger asset and token lifecycle, and transaction implementation
+- Wallet and transaction integration
+- Blockchain security and testing
+- Ledger integration handoff to backend
 
 ## Implementation status
 
