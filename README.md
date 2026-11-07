@@ -123,15 +123,19 @@ The materials are arranged for three readings. The labels describe the documents
 
 ## Team
 
-These are assigned responsibilities for the concept. They are not completed deliverables. No interface, ledger integration, or backend service has been built.
+These are assigned responsibilities for the concept. They are not completed deliverables. No interface, frontend, ledger integration, or backend service has been built.
 
-**UI/UX Lead — [kayode96-max](https://github.com/kayode96-max)**
+**UI/UX and Frontend Lead — [kayode96-max](https://github.com/kayode96-max)**
 
 - User journeys and information architecture for the supplier, buyer, funder, and operator
 - Wireframes and interactive prototypes
 - Visual design and a reusable design system
 - Responsive, accessible interface design
 - Usability testing and developer handoff
+- Responsive, accessible frontend interfaces and components
+- Application interactions and state
+- Integration of backend APIs and wallet or transaction interfaces, with the Backend Developer and the Blockchain Lead
+- Frontend testing
 
 **Blockchain Lead — [Zakariyah Abdulaleem (@zakkycrypt01)](https://github.com/zakkycrypt01)**
 
