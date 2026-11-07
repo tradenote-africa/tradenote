@@ -1,15 +1,14 @@
 # TradeNote White Paper
 
-Version 0.1 concept paper, 7 November 2026. Buyer-confirmed invoice finance for African suppliers, with a proposed XRP Ledger record and a clear account of what a ledger cannot do.
+Buyer-confirmed invoice finance for African suppliers, with a proposed XRP Ledger record and a clear account of what a ledger cannot do.
 
-| Field | Value |
-| --- | --- |
-| Document | TradeNote white paper |
-| Version | 0.1 — concept and proposed architecture |
-| Date | 7 November 2026, Africa/Lagos |
-| Status | Not built, not submitted, no traction claimed |
+**Version 0.1** · Concept and proposed architecture · 7 November 2026, Africa/Lagos  
+**Status:** Not built, not submitted, no traction claimed
 
+> [!WARNING]
 > **Concept paper, not a live product.** This version describes a proposed design. It is not evidence that software, users, partners, licences, collections, or ledger transactions exist. No team roster has been provided, and none is invented here.
+
+Related files: [README.md](README.md) · [LICENSE](LICENSE)
 
 ## Contents
 
@@ -58,6 +57,8 @@ The interface should read as an invoice tool, not as a trading terminal. Screens
 
 Accessibility and low bandwidth are part of product design, not decoration. The interface should keep strong contrast, visible labels, and error text that names the field and the repair. It should not rely on gesture-only controls or on colour as the only status signal. Pages should remain usable on a modest Android phone over an unstable connection. A first demonstration can use seeded sample accounts so a reviewer is not asked for identity documents or wallet secrets.
 
+### Proposed steps
+
 1. **Supplier creates the invoice record.** Enters buyer, amount, currency, and due date, and uploads the document. This step stays in the application database.
 2. **Buyer confirms or rejects.** The named buyer confirms the amount and that the obligation exists, or rejects the record. Confirmation is not payment.
 3. **Approved funder offers an advance.** A pre-approved funder proposes an amount below face value. This is an offer, not a promised return.
@@ -65,6 +66,8 @@ Accessibility and low bandwidth are part of product design, not decoration. The 
 5. **Operator records the invoice token.** The operator creates a Multi-Purpose Token issuance for that financed invoice and pays it to the authorized funder. This is a record, not title by itself.
 6. **Funder sends a separate settlement payment.** The funder pays the supplier with a test-issued settlement token in a second transaction. If that payment fails, the application must reconcile. This is not atomic delivery-versus-payment.
 7. **Buyer pays and the file is closed.** Collection would happen through local fiat rails proposed for a later phase. The ledger can retire the invoice token after repayment; it cannot force the buyer to pay.
+
+### Architecture flow
 
 ```mermaid
 flowchart TD
@@ -97,6 +100,8 @@ Duplicate financing is a structural limit, not a user-interface defect. Inside T
 Personal and commercially sensitive documents stay off the ledger. Invoice files, identity documents, addresses, bank details, and underwriting notes belong in an access-controlled application database, encrypted at rest in any later production design. On-chain metadata should carry an opaque invoice reference, the document hash, a currency code, and similar non-personal fields, using the conventional Multi-Purpose Token metadata shape, which official documentation limits to 1024 bytes. Amounts visible as token quantity are a privacy trade-off: they help an auditor inspect the record and they also reveal commercial values to anyone who can read the ledger. This design accepts that trade-off for financed invoices and refuses to place names or documents beside it. [4]
 
 Collections, defaults, and disputes are also off-chain processes with optional on-chain marks. The buyer still pays through the corridor's fiat rails into an account controlled under the financing contract. If the buyer pays, the operator would reconcile the collection, the funder would be repaid according to the contract, any residual would return to the supplier, and the invoice token would be sent back to the issuer, which burns it. If the buyer disputes, the operator could lock the invoice token so its balance cannot move except back to the issuer, and the file would move into a dispute state while people, not the ledger, examine the claim. If the buyer defaults, the outcome depends on whether the contract is written with recourse to the supplier or without it. This paper does not choose that term for every corridor. In a non-recourse illustration the funder bears buyer-credit risk after taking its own underwriting decision. In a recourse illustration the supplier may have to repay the advance. Neither version is a guaranteed recovery, and neither is implemented.
+
+### Invoice lifecycle states
 
 | State | Meaning | Ledger write |
 | --- | --- | --- |
@@ -158,15 +163,13 @@ TradeNote would earn a platform fee for originating and administering a financed
 
 The following example is hypothetical. It exists to make the arithmetic and the payers visible. It is not a price list, a backtest, or a guarantee. The invoice currency is called units so that the example does not pretend a live foreign-exchange rate.
 
-$$
-\begin{align}
-\text{Advance} &= \text{Face} \times 0.80 \tag{1} \\
-\text{PlatformFee} &= \text{Face} \times 0.01 \tag{2} \\
-\text{SupplierNet} &= \text{Advance} - \text{PlatformFee} \tag{3} \\
-\text{FunderRepayment} &= \text{Advance} + \text{Face} \times 0.02 \tag{4} \\
-\text{SupplierResidual} &= \text{Face} - \text{FunderRepayment} \tag{5}
-\end{align}
-$$
+```
+(1)  Advance           = Face × 0.80
+(2)  PlatformFee       = Face × 0.01
+(3)  SupplierNet       = Advance − PlatformFee
+(4)  FunderRepayment   = Advance + Face × 0.02
+(5)  SupplierResidual  = Face − FunderRepayment
+```
 
 | Item | Amount | Who pays or receives |
 | --- | --- | --- |
@@ -199,7 +202,9 @@ TradeNote's intended difference is a hard buyer-confirmation gate before any adv
 
 The risks below are design risks for a product that has not launched. Severity judgments are qualitative. They are not measured frequencies and not an insurance rating.
 
-The Page renders the following points on a two-by-two matrix. The horizontal axis runs from less likely (0) to more likely (1). The vertical axis runs from lower impact (0) to higher impact (1).
+### Risk positions
+
+The following points were placed on a two-by-two matrix. The horizontal axis runs from less likely (0) to more likely (1). The vertical axis runs from lower impact (0) to higher impact (1).
 
 | Risk | Likelihood (0–1) | Impact (0–1) |
 | --- | --- | --- |
@@ -209,6 +214,8 @@ The Page renders the following points on a two-by-two matrix. The horizontal axi
 | Assignment law | 0.48 | 0.86 |
 | FX mismatch | 0.58 | 0.60 |
 | Testnet drift | 0.36 | 0.38 |
+
+### Compliance controls
 
 | Topic | Issue | Proposed control |
 | --- | --- | --- |
@@ -227,13 +234,30 @@ The Page renders the following points on a two-by-two matrix. The horizontal axi
 
 No MVP has been built. The phases below are a sequence of work, not a calendar. No delivery dates are assigned.
 
-| Phase | Purpose | In scope | Out of scope |
-| --- | --- | --- | --- |
-| 0. Concept | Say clearly what TradeNote is and is not | This paper and the retained submission appendix | Code, partners, or users |
-| 1. Narrow demo | Let a reviewer walk the three commercial roles on testnet | Sample invoice, confirm, offer, accept, one invoice MPT, one sequential settlement Payment, explorer links, on-screen legal limits | Fiat rails, real RLUSD, public lending, MPT trading, escrow-based settlement, promised yields |
-| 2. Corridor design | Make the legal and licensing path specific without pretending it is done | Contract templates, uniqueness rules, identity-vendor evaluation, issuer-key design | A live licence or a signed operator |
-| 3. Supervised pilot | Test the workflow with a licensed partner in one corridor | A small number of counterparties, fiat collection design, dispute and default runbooks | Continental rollout or mainnet value |
-| 4. More corridors | Repeat the operator and adapter pattern | New contract packs, identity checks, and payout adapters | One licence or one rail reused as if it covered Africa |
+**Phase 0 — Concept**  
+Purpose: Say clearly what TradeNote is and is not.  
+In scope: This paper and the retained submission appendix.  
+Out of scope: Code, partners, or users.
+
+**Phase 1 — Narrow demo**  
+Purpose: Let a reviewer walk the three commercial roles on testnet.  
+In scope: Sample invoice, confirm, offer, accept, one invoice MPT, one sequential settlement Payment, explorer links, on-screen legal limits.  
+Out of scope: Fiat rails, real RLUSD, public lending, MPT trading, escrow-based settlement, promised yields.
+
+**Phase 2 — Corridor design**  
+Purpose: Make the legal and licensing path specific without pretending it is done.  
+In scope: Contract templates, uniqueness rules, identity-vendor evaluation, issuer-key design.  
+Out of scope: A live licence or a signed operator.
+
+**Phase 3 — Supervised pilot**  
+Purpose: Test the workflow with a licensed partner in one corridor.  
+In scope: A small number of counterparties, fiat collection design, dispute and default runbooks.  
+Out of scope: Continental rollout or mainnet value.
+
+**Phase 4 — More corridors**  
+Purpose: Repeat the operator and adapter pattern.  
+In scope: New contract packs, identity checks, and payout adapters.  
+Out of scope: One licence or one rail reused as if it covered Africa.
 
 A first demonstration should leave out open public lending, claimed returns, MPT trading, lending-protocol features, single-asset vaults, confidential transfers, atomic delivery-versus-payment, mainnet value, and any live mobile-money connection. Official documentation still lists several of those ledger features as proposed or as open for voting. The demonstration should only use primitives that the chosen testnet actually accepts.
 
@@ -274,3 +298,5 @@ Numbered markers in the text point to the sources below. Ledger feature status c
 6. Credentials, xrpl.org. https://xrpl.org/docs/concepts/decentralized-storage/credentials
 7. RLUSD chains and networks, docs.ripple.com. https://docs.ripple.com/products/stablecoin/overview/supported-chains-and-networks
 8. MPTokenAuthorize and sending an MPT, xrpl.org. https://xrpl.org/docs/tutorials/payments/send-an-mpt
+
+See also [README.md](README.md) and [LICENSE](LICENSE).
