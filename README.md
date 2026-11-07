@@ -123,7 +123,7 @@ The materials are arranged for three readings. The labels describe the documents
 
 ## Team
 
-These are assigned responsibilities for the concept. They are not completed deliverables. No interface or ledger integration has been built.
+These are assigned responsibilities for the concept. They are not completed deliverables. No interface, ledger integration, or backend service has been built.
 
 **UI/UX Lead — [kayode96-max](https://github.com/kayode96-max)**
 
@@ -140,6 +140,15 @@ These are assigned responsibilities for the concept. They are not completed deli
 - Wallet and transaction integration
 - Blockchain security and testing
 - Ledger integration handoff to backend
+
+**Backend Developer — [Abdushakur Bashir (@abdushakurob)](https://github.com/abdushakurob)**
+
+- Backend API and service development
+- Invoice and workflow data persistence
+- Authentication and authorization
+- Off-ledger document handling
+- Ledger integration coordination with the Blockchain Lead
+- Backend testing
 
 ## Implementation status
 
