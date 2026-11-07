@@ -1,12 +1,31 @@
-# TradeNote
+<h1 align="center">🚀 Turn a confirmed invoice into an earlier advance</h1>
 
-Buyer-confirmed invoice finance for African suppliers, recorded on the XRP Ledger.
+<p align="center"><em>TradeNote proposes buyer-confirmed invoice finance for African suppliers, with the record written on the XRP Ledger.</em></p>
 
-**Version 0.1** · Concept documentation · 7 November 2026
+---
 
-TradeNote proposes a clear path from a confirmed business invoice to an earlier advance. A supplier uploads the invoice. The named buyer confirms the amount and the obligation. An approved funder offers an advance. After the parties execute financing documents, the design records that financing on the XRP Ledger.
+<p align="center">
+  <img src="assets/tradenote-banner.svg" alt="Illustrated TradeNote sequence: an invoice, a buyer confirmation, and a funding mark above a record line. Movement, when the viewer allows it, traces that proposed order. This is not a live ledger or payment screen." width="100%">
+</p>
 
-This repository is the proposal: a reviewer-facing overview and a source-backed [white paper](WHITEPAPER.md), released under the [MIT License](LICENSE).
+<p align="center">
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-111111?style=flat-square"></a>
+  <a href="WHITEPAPER.md#why-the-xrp-ledger"><img alt="XRP Ledger design" src="https://img.shields.io/badge/XRP_Ledger-Design-0F766E?style=flat-square"></a>
+  <a href="#implementation-status"><img alt="Concept documentation, version 0.1" src="https://img.shields.io/badge/Documentation-Concept-3F6212?style=flat-square"></a>
+  <a href="#implementation-status"><img alt="Version 0.1" src="https://img.shields.io/badge/Version-0.1-44403C?style=flat-square"></a>
+  <a href="#pan-african-customers"><img alt="Pan-African design scope" src="https://img.shields.io/badge/Scope-Pan--African-7C2D12?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="WHITEPAPER.md"><img alt="White paper" src="https://img.shields.io/badge/White_paper-Read-334155?style=flat-square"></a>
+  <a href="WHITEPAPER.md#product-design"><img alt="Product design section of the white paper" src="https://img.shields.io/badge/Product-Design-334155?style=flat-square"></a>
+  <a href="WHITEPAPER.md#technical-architecture"><img alt="Technical architecture section of the white paper" src="https://img.shields.io/badge/Technical-Architecture-334155?style=flat-square"></a>
+  <a href="WHITEPAPER.md#business-model"><img alt="Business model section of the white paper" src="https://img.shields.io/badge/Business-Model-334155?style=flat-square"></a>
+</p>
+
+A supplier uploads an invoice. The named buyer confirms the amount and the obligation. An approved funder offers an advance. After the financing documents, a licensed local operator would record that financing on the XRP Ledger. The full design, sources, and limits are in the [white paper](WHITEPAPER.md). These files are released under the [MIT License](LICENSE).
+
+<p align="center"><em>Version 0.1 · 7 November 2026 · Concept documentation · README, white paper, and MIT licence.</em></p>
 
 ## At a glance
 
@@ -18,6 +37,20 @@ This repository is the proposal: a reviewer-facing overview and a source-backed 
 | Settlement | A separate Payment of a test-issued settlement token |
 | Geography | Pan-African product design, launched through one regulated corridor at a time |
 | This repository | Concept documentation, version 0.1, dated 7 November 2026 |
+
+## Contents
+
+- [Problem](#problem)
+- [Proposal](#proposal)
+- [Customer journey](#customer-journey)
+- [Why the XRP Ledger](#why-the-xrp-ledger)
+- [Differentiators](#differentiators)
+- [Pan-African customers](#pan-african-customers)
+- [Review map](#review-map)
+- [Implementation status](#implementation-status)
+- [Risk management](#risk-management)
+- [Prospective roadmap](#prospective-roadmap)
+- [Documents](#documents)
 
 ## Problem
 
