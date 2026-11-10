@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 740" role="img">
+  <title>Planned TradeNote system context</title>
+  <desc>Planned system context for the TradeNote narrow demo. Suppliers, buyers, funders, and the operator use a web app and a backend API. The database is the source of truth, documents stay in file storage, wallets sign transactions, and the XRP Ledger testnet is the evidence layer. This is not a live deployment.</desc>
+  <rect width="1120" height="740" fill="#0E1A22"/>
+  <rect x="16" y="16" width="1088" height="708" fill="none" stroke="#C6A15B" stroke-width="2"/>
+  <text x="40" y="58" fill="#F7F4EE" font-family="Inter, 'Noto Sans', sans-serif" font-size="28" font-weight="600">Planned system context</text>
+  <text x="1080" y="58" fill="#C6A15B" font-family="Inter, 'Noto Sans', sans-serif" font-size="14" text-anchor="end">10 November 2026</text>
+  <text x="40" y="86" fill="#D5DDD8" font-family="Inter, 'Noto Sans', sans-serif" font-size="15">The database holds the truth. The ledger holds the evidence. Seeds stay in wallets.</text>
+
+  <g font-family="Inter, 'Noto Sans', sans-serif">
+    <g fill="#F6F2E9">
+      <rect x="40" y="112" width="244" height="96" rx="14"/>
+      <rect x="304" y="112" width="244" height="96" rx="14"/>
+      <rect x="568" y="112" width="244" height="96" rx="14"/>
+      <rect x="832" y="112" width="248" height="96" rx="14"/>
+    </g>
+    <g fill="#1B2C34" font-size="18" font-weight="600">
+      <text x="162" y="150" text-anchor="middle">Supplier</text>
+      <text x="426" y="150" text-anchor="middle">Buyer</text>
+      <text x="690" y="150" text-anchor="middle">Funder</text>
+      <text x="956" y="150" text-anchor="middle">Operator</text>
+    </g>
+    <g fill="#3E534C" font-size="14">
+      <text x="162" y="176" text-anchor="middle">Creates the invoice</text>
+      <text x="426" y="176" text-anchor="middle">Confirms or rejects</text>
+      <text x="690" y="176" text-anchor="middle">Offers the advance</text>
+      <text x="956" y="176" text-anchor="middle">Passes the legal gate</text>
+    </g>
+
+    <rect x="40" y="244" width="1040" height="86" rx="14" fill="#123E3A"/>
+    <text x="64" y="278" fill="#F7F4EE" font-size="18" font-weight="600">Web app</text>
+    <text x="64" y="304" fill="#D7E4DF" font-size="15">Role portals. Each person sees only the decision that role can take.</text>
+
+    <rect x="40" y="366" width="680" height="128" rx="14" fill="#17343F"/>
+    <text x="64" y="400" fill="#F7F4EE" font-size="18" font-weight="600">Backend API</text>
+    <text x="64" y="428" fill="#D5DDD8" font-size="15">Sessions, invoices, documents, confirmation, offers, legal gate.</text>
+    <text x="64" y="452" fill="#D5DDD8" font-size="15">Ledger intents, reconciler, collection simulator, audit log.</text>
+    <text x="64" y="476" fill="#C6A15B" font-size="14">Success is stored only after a validated tesSUCCESS.</text>
+
+    <rect x="740" y="366" width="340" height="128" rx="14" fill="#1B2C34" stroke="#C6A15B" stroke-width="1.5"/>
+    <text x="764" y="400" fill="#F7F4EE" font-size="18" font-weight="600">Wallets</text>
+    <text x="764" y="428" fill="#D5DDD8" font-size="15">Parties sign their own transactions.</text>
+    <text x="764" y="452" fill="#D5DDD8" font-size="15">The operator key stays in the</text>
+    <text x="764" y="476" fill="#D5DDD8" font-size="15">server environment.</text>
+
+    <rect x="40" y="530" width="500" height="78" rx="14" fill="#132833" stroke="#1F4A44" stroke-width="1.5"/>
+    <text x="64" y="560" fill="#F7F4EE" font-size="18" font-weight="600">Database</text>
+    <text x="64" y="584" fill="#D5DDD8" font-size="15">Source of truth for state, identity, and amounts.</text>
+
+    <rect x="560" y="530" width="520" height="78" rx="14" fill="#132833" stroke="#1F4A44" stroke-width="1.5"/>
+    <text x="584" y="560" fill="#F7F4EE" font-size="18" font-weight="600">Document storage</text>
+    <text x="584" y="584" fill="#D5DDD8" font-size="15">Invoice files stay here. The ledger receives the hash.</text>
+
+    <rect x="40" y="640" width="1040" height="68" rx="14" fill="#1A1408" stroke="#C6A15B" stroke-width="1.5"/>
+    <text x="64" y="668" fill="#C6A15B" font-size="18" font-weight="600">XRP Ledger testnet</text>
+    <text x="64" y="692" fill="#F3E6C4" font-size="15">Evidence layer. One invoice token after the legal gate, then a separate settlement Payment.</text>
+  </g>
+
+  <g fill="none" stroke="#C6A15B" stroke-width="2" stroke-linecap="round">
+    <path d="M162 208 V244"/>
+    <path d="M426 208 V244"/>
+    <path d="M690 208 V244"/>
+    <path d="M956 208 V244"/>
+    <path d="M380 330 V366"/>
+    <path d="M910 330 V366"/>
+    <path d="M290 494 V530"/>
+    <path d="M640 494 V530"/>
+    <path d="M290 608 V640"/>
+    <path d="M820 608 V640"/>
+  </g>
+</svg>
