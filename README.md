@@ -18,14 +18,15 @@
 
 <p align="center">
   <a href="WHITEPAPER.md"><img alt="White paper" src="https://img.shields.io/badge/White_paper-Read-334155?style=flat-square"></a>
+  <a href="docs/ARCHITECTURE.md"><img alt="Planned architecture" src="https://img.shields.io/badge/Architecture-Planned-0F766E?style=flat-square"></a>
   <a href="WHITEPAPER.md#product-design"><img alt="Product design section of the white paper" src="https://img.shields.io/badge/Product-Design-334155?style=flat-square"></a>
   <a href="WHITEPAPER.md#technical-architecture"><img alt="Technical architecture section of the white paper" src="https://img.shields.io/badge/Technical-Architecture-334155?style=flat-square"></a>
   <a href="WHITEPAPER.md#business-model"><img alt="Business model section of the white paper" src="https://img.shields.io/badge/Business-Model-334155?style=flat-square"></a>
 </p>
 
-A supplier uploads an invoice. The named buyer confirms the amount and the obligation. An approved funder offers an advance. After the financing documents, a licensed local operator would record that financing on the XRP Ledger. The full design, sources, and limits are in the [white paper](WHITEPAPER.md). These files are released under the [MIT License](LICENSE).
+A supplier uploads an invoice. The named buyer confirms the amount and the obligation. An approved funder offers an advance. After the financing documents, a licensed local operator would record that financing on the XRP Ledger. The full design, sources, and limits are in the [white paper](WHITEPAPER.md). The planned components, state machine, ledger rules, and API are in the [architecture](docs/ARCHITECTURE.md). These files are released under the [MIT License](LICENSE).
 
-<p align="center"><em>Version 0.1 · 7 November 2026 · Concept documentation · README, white paper, and MIT licence.</em></p>
+<p align="center"><em>Version 0.1 · 7 November 2026 · Concept documentation · README, white paper, architecture, and MIT licence.</em></p>
 
 ## At a glance
 
@@ -47,6 +48,7 @@ A supplier uploads an invoice. The named buyer confirms the amount and the oblig
 - [Differentiators](#differentiators)
 - [Pan-African customers](#pan-african-customers)
 - [Review map](#review-map)
+- [Architecture](docs/ARCHITECTURE.md)
 - [Team](#team)
 - [Implementation status](#implementation-status)
 - [Risk management](#risk-management)
@@ -118,7 +120,7 @@ The materials are arranged for three readings. The labels describe the documents
 | Reading | What the proposal specifies | Where |
 | --- | --- | --- |
 | Product design | Phone-first invoice workflow, role-specific actions, confirmation by link, low-bandwidth and accessible screens | [Product design](WHITEPAPER.md#product-design) |
-| Technical design | Legal gate, invoice Multi-Purpose Token, sequential settlement Payment, hashes, signing, and reconcile rules | [Technical architecture](WHITEPAPER.md#technical-architecture) |
+| Technical design | Legal gate, invoice Multi-Purpose Token, sequential settlement Payment, hashes, signing, and reconcile rules | [Technical architecture](WHITEPAPER.md#technical-architecture) and the [planned architecture](docs/ARCHITECTURE.md) |
 | Business design | Origination fee, disclosed funder charge, corridor launch, and the sourced market context | [Business model](WHITEPAPER.md#business-model) and [Market position](WHITEPAPER.md#market-position) |
 
 ## Team
@@ -156,7 +158,7 @@ These are assigned responsibilities for the concept. They are not completed deli
 
 ## Implementation status
 
-Version 0.1 is concept documentation dated 7 November 2026. The repository contains this overview, the white paper, and the licence.
+Version 0.1 is concept documentation dated 7 November 2026. The repository contains this overview, the white paper, the planned architecture, and the licence.
 
 No application, deployment, demo, user base, licence, collection operation, partner integration, signed counterparty, or XRP Ledger transaction history is included. Local payout rails are proposed adapters. The prospective roadmap below is a sequence of work. Phases after this paper are not built, staffed, or dated. Measures in the white paper are targets for a later evaluation, not observed results.
 
@@ -183,4 +185,5 @@ The phases are an order of work, not a delivery calendar.
 ## Documents
 
 - [WHITEPAPER.md](WHITEPAPER.md) — Version 0.1 white paper
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — Planned architecture for the narrow demo
 - [LICENSE](LICENSE) — MIT License

@@ -4,7 +4,7 @@ Buyer-confirmed invoice finance for African suppliers, with a proposed XRP Ledge
 
 **Version 0.1** · Concept and proposed architecture · 7 November 2026, Africa/Lagos
 
-Related files: [README.md](README.md) · [LICENSE](LICENSE)
+Related files: [README.md](README.md) · [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · [LICENSE](LICENSE)
 
 ## Contents
 
@@ -36,7 +36,7 @@ The commercial idea is already used by institutions that finance invoices a buye
 
 ## Implementation status
 
-This version is concept documentation. It describes a proposed design. The repository holds this paper, the README, and the MIT licence.
+This version is concept documentation. It describes a proposed design. The repository holds this paper, the README, the architecture document, and the MIT licence.
 
 No application, deployment, demo, team roster, partner list, licence, user count, collection operation, or XRP Ledger transaction is included, and none is invented here. There are no signed funders, operators, buyers, or suppliers. No team roster was provided. A test-issued settlement token does not demonstrate fiat settlement finality. Feature dates below are taken from public documentation retrieved on 7 November 2026, Africa/Lagos. A later build still has to confirm those features on the testnet it uses.
 
@@ -349,4 +349,4 @@ The sources below are the documents this paper relies on. Ledger feature status 
 7. RLUSD chains and networks, docs.ripple.com. https://docs.ripple.com/products/stablecoin/overview/supported-chains-and-networks
 8. MPTokenAuthorize and sending an MPT, xrpl.org. https://xrpl.org/docs/tutorials/payments/send-an-mpt
 
-See also [README.md](README.md) and [LICENSE](LICENSE).
+See also [README.md](README.md), [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), and [LICENSE](LICENSE).
